@@ -1,0 +1,20 @@
+ .output-item {
+   height: 8vw;
+
+   .output-label {
+     width: 20vw;
+     height: 100%;
+     padding-right: 2vw;
+     vertical-align: center;
+     font-size: 2vw;
+   }
+
+   .output-value {
+     width: 20vw;
+     height: 100%;
+     color: green;
+     font-size: 4.5vw;
+     padding-left: 2vw;
+     vertical-align: center;
+   }
+ }
