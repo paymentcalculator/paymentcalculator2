@@ -1,7 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import Paper from 'material-ui/lib/paper';
-import TextField from 'material-ui/lib/text-field';
-import RaisedButton from 'material-ui/lib/raised-button';
+import connect from 'react-redux'
 
 const paymentAmount = {
     'font-size': '3vw',
@@ -12,6 +10,9 @@ const paymentAmount = {
 
 
 export default class CalculatorOutput extends Component {
+    constructor(props){
+        super(props);
+    }
 
     render() {
         return (
@@ -22,7 +23,7 @@ export default class CalculatorOutput extends Component {
                             Monthly Payment:
                         </span>
                         <span className="output-value payment">
-                            $454
+                            ${this.props.monthlyPayment}
                         </span>
                     </span>
                 </div>
@@ -32,7 +33,7 @@ export default class CalculatorOutput extends Component {
                             Total Loan Cost:
                         </span>
                         <span className="output-value payment">
-                            $10,738
+                            ${this.props.totalLoanCost}
                         </span>
                      </span>
                 </div>
@@ -40,3 +41,19 @@ export default class CalculatorOutput extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        monthlyPayment: state.calculator.monthlyPayment,
+        totalLoanCost: state.calculator.totalLoanCost
+    };
+};
+
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+
+    }
+};
+
+export default connect(mapStateToProps)(CalculatorOutput)
