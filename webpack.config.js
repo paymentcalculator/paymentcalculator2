@@ -27,7 +27,20 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loaders: [ 'babel' ],
+        loader: 'babel',
+        query: {
+          plugins: ['react-transform'],
+          extra: {
+            "react-transform": [{
+              "target": "react-transform-hmr",
+              "imports": ["react"],
+              "locals": ["module"]
+            }, {
+              "target": "react-transform-catch-errors",
+              "imports": ["react", "redbox-react"]
+            }]
+          }
+        },
         exclude: /node_modules/,
         include: path.join(__dirname, 'src')
       },
