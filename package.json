@@ -29,6 +29,7 @@
     "redux": "^3.2.1",
     "redux-logger": "^2.5.2",
     "redux-thunk": "^2.0.1",
+    "serve-static": "^1.10.2",
     "what-input": "^1.1.4"
   },
   "optionalDependencies": {},
