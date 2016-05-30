@@ -6,7 +6,7 @@
   "author": "Payment Calculator",
   "scripts": {
     "start": "node server",
-    "build": "webpack --define process.env.NODE_ENV='\"production\"'  --config webpack.config.prod.js --color -p --progress"
+    "build": "NODE_ENV=production webpack --define process.env.NODE_ENV='\"production\"'  --config webpack.config.prod.js --color -p --progress"
   },
   "dependencies": {
     "classnames": "^2.2.0",
