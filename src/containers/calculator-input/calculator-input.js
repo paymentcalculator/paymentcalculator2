@@ -2,8 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import TextField from 'material-ui/lib/text-field';
 import RaisedButton from 'material-ui/lib/raised-button';
 import { createFieldClass, controls, Field, Form, actions, dispatch } from 'react-redux-form';
-import { connect } from 'react-redux'
-import * as Actions from '../../actions'
 
 // Special form helper required to wrap material ui within react-redux-form
 const MaterialField = createFieldClass({
@@ -11,33 +9,33 @@ const MaterialField = createFieldClass({
 });
 
 const inputStyle = {
-    'fontSize': '3vw',
-    'lineHeight': '4.5vw',
+    'font-size': '3vw',
+    'line-height': '4.5vw',
     'width': '60vw',
     'height': '8vw'
 };
 
 const inputStyleLabel = {
-    'fontSize': '2vw',
-    'lineHeight': '3vw',
+    'font-size': '2vw',
+    'line-height': '3vw',
     'height': '6vw',
     'color': '#3e78a6'
 };
 
 const inputStyleComp = {
-    'boxShadow': 'none',
-    'lineHeight': '4.5vw'
+    'box-shadow': 'none',
+    'line-height': '4.5vw'
 };
 
 const underlineStyle = {
-    'borderColor': '#3e78a6'
+    'border-color': '#3e78a6'
 };
 const buttonStyle = {
     'margin': '2vw'
 };
 
 
-class CalculatorInput extends Component {
+export default class CalculatorInput extends Component {
 
     render() {
         return (
@@ -76,7 +74,6 @@ class CalculatorInput extends Component {
                     labelColor="white"
                     backgroundColor="green"
                     style={buttonStyle}
-                    onClick={this.props.calculate}
                 />
                 <RaisedButton
                     label="Reset All"
@@ -88,24 +85,3 @@ class CalculatorInput extends Component {
         )
     }
 }
-
-
-const mapStateToProps = (state) => {
-    return {
-
-    };
-};
-
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        calculate: () => {
-            dispatch(Actions.calculate())
-        },
-        reset: () => {
-            dispatch(Actions.reset())
-        }
-    }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(CalculatorInput)
