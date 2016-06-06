@@ -5,3 +5,13 @@
   padding-top: 0vw;
   background: #ffffff;
 }
+
+@media screen and (max-width: 600px) {
+  .panel {
+    padding: 2vw;
+    display: inline-block;
+    width: 95vw;
+    padding-top: 0vw;
+    background: #ffffff;
+  }
+}

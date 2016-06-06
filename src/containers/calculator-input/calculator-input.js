@@ -9,22 +9,17 @@ const MaterialField = createFieldClass({
 });
 
 const inputStyle = {
-    'font-size': '3vw',
-    'line-height': '4.5vw',
-    'width': '60vw',
-    'height': '8vw'
+    'font-size': '18px',
+    'width': '90%'
 };
 
 const inputStyleLabel = {
-    'font-size': '2vw',
-    'line-height': '3vw',
-    'height': '6vw',
+    'font-size': '15px',
     'color': '#3e78a6'
 };
 
 const inputStyleComp = {
-    'box-shadow': 'none',
-    'line-height': '4.5vw'
+    'box-shadow': 'none'
 };
 
 const underlineStyle = {
