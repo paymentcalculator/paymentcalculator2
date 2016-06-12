@@ -1,5 +1,6 @@
 import update from 'react-addons-update'
 import { formReducer, modeled } from 'react-redux-form'
+import Calc from 'loan-calc'
 
 const calculatorInitialState = {
     inputAmount: 1000,
@@ -27,6 +28,19 @@ function calculatorReducer(state = calculatorInitialState, action) {
         case 'RESET':
             return update(state, {
                 $set: calculatorResetState
+            });
+
+        case 'CALCULATE':
+            let payment = Calc.paymentCalc({amount: state.inputAmount, rate: state.inputRate, termMonths: (state.inputDuration * 12)});
+            let interest = Calc.totalInterest({amount: state.inputAmount, rate: state.inputRate, termMonths: (state.inputDuration * 12)});
+            let cost = interest + Number(state.inputAmount);
+            return update(state, {
+                monthlyPayment: {
+                    $set: payment
+                },
+                totalLoanCost: {
+                    $set: cost
+                }
             });
 
         default:

@@ -3,3 +3,9 @@ export function reset() {
     type: 'RESET'
   }
 }
+export function calculate() {
+  return {
+    type: 'CALCULATE'
+  }
+}
+

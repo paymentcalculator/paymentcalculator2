@@ -15,6 +15,7 @@
     "foundation-sites": "^6.1.2",
     "hapi": "^13.3.0",
     "jquery": "^2.2.3",
+    "loan-calc": "^0.2.1",
     "material-ui": "^0.14.4",
     "nes": "^4.2.1",
     "react": "^0.14.5",

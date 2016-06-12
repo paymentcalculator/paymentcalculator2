@@ -79,6 +79,7 @@ export default class CalculatorInput extends Component {
                     labelColor="white"
                     backgroundColor="green"
                     style={buttonStyle}
+                    onClick={this.props.calculate}
                 />
                 <RaisedButton
                     label="Reset All"

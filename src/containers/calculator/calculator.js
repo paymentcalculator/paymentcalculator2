@@ -17,6 +17,7 @@ class Calculator extends Component {
                 <Paper className="panel">
                     <CalculatorInput
                         reset={this.props.reset}
+                        calculate={this.props.calculate}
                         calculator={this.props.calculator}
                     />
                     <CalculatorOutput
@@ -41,6 +42,9 @@ const mapDispatchToProps = (dispatch) => {
     return {
         reset: () => {
             dispatch(Actions.reset())
+        },
+        calculate: () => {
+            dispatch(Actions.calculate())
         }
     }
 };
