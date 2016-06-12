@@ -35,6 +35,9 @@ const buttonStyle = {
 
 
 export default class CalculatorInput extends Component {
+    constructor(props){
+        super(props)
+    }
 
     render() {
         return (
@@ -46,6 +49,7 @@ export default class CalculatorInput extends Component {
                             inputStyle={inputStyleComp}
                             floatingLabelStyle={inputStyleLabel}
                             style={inputStyle}
+                            value={this.props.calculator.inputAmount}
                             floatingLabelText="Initial Loan Amount ($)"
                         />
                     </MaterialField>
@@ -55,6 +59,7 @@ export default class CalculatorInput extends Component {
                             inputStyle={inputStyleComp}
                             floatingLabelStyle={inputStyleLabel}
                             style={inputStyle}
+                            value={this.props.calculator.inputRate}
                             floatingLabelText="Interest Rate (%)"
                         />
                     </MaterialField>
@@ -64,6 +69,7 @@ export default class CalculatorInput extends Component {
                             inputStyle={inputStyleComp}
                             floatingLabelStyle={inputStyleLabel}
                             style={inputStyle}
+                            value={this.props.calculator.inputDuration}
                             floatingLabelText="Duration of Loan (months)"
                         />
                     </MaterialField>
@@ -79,6 +85,7 @@ export default class CalculatorInput extends Component {
                     labelColor="white"
                     backgroundColor="red"
                     style={buttonStyle}
+                    onClick={this.props.reset}
                 />
             </div>
         )
