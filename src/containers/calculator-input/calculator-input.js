@@ -49,6 +49,7 @@ export default class CalculatorInput extends Component {
                             inputStyle={inputStyleComp}
                             floatingLabelStyle={inputStyleLabel}
                             style={inputStyle}
+                            type="number"
                             value={this.props.calculator.inputAmount}
                             floatingLabelText="Initial Loan Amount ($)"
                         />
@@ -59,6 +60,7 @@ export default class CalculatorInput extends Component {
                             inputStyle={inputStyleComp}
                             floatingLabelStyle={inputStyleLabel}
                             style={inputStyle}
+                            type="number"
                             value={this.props.calculator.inputRate}
                             floatingLabelText="Interest Rate (%)"
                         />
@@ -69,6 +71,7 @@ export default class CalculatorInput extends Component {
                             inputStyle={inputStyleComp}
                             floatingLabelStyle={inputStyleLabel}
                             style={inputStyle}
+                            type="number"
                             value={this.props.calculator.inputDuration}
                             floatingLabelText="Duration of Loan (years)"
                         />
