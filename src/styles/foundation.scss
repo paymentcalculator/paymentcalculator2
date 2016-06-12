@@ -3,6 +3,7 @@
 @import '../containers/calculator/calculator';
 @import '../containers/calculator-input/calculator-input';
 @import '../containers/calculator-output/calculator-output';
+@import '../containers/footer/footer';
 
 /// include all modules of foundation
 @include foundation-everything;

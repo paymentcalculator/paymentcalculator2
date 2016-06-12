@@ -1,5 +1,9 @@
 .calculator-container {
   text-align: center;
   background: #3e78a6;
-  min-height: 100vh;
+}
+
+.panel {
+  min-height: 98vh;
+  position: relative;
 }
