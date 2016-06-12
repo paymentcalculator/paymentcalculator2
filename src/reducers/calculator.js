@@ -3,11 +3,11 @@ import { formReducer, modeled } from 'react-redux-form'
 import Calc from 'loan-calc'
 
 const calculatorInitialState = {
-    inputAmount: 1000,
+    inputAmount: 5000,
     inputRate: 3.25,
     inputDuration: 5,
-    monthlyPayment: 112,
-    totalLoanCost: 1345,
+    monthlyPayment: 90.4,
+    totalLoanCost: 5424,
     interestCost: null
 };
 
