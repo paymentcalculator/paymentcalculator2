@@ -11,12 +11,12 @@ const calculatorInitialState = {
 };
 
 const calculatorResetState = {
-    inputAmount: null,
-    inputRate: null,
-    inputDuration: null,
-    monthlyPayment: null,
-    totalLoanCost: null,
-    interestCost: null
+    inputAmount: "",
+    inputRate: "",
+    inputDuration: "",
+    monthlyPayment: "",
+    totalLoanCost: "",
+    interestCost: ""
 };
 
 // This defines the handling of our custom actions created in the calculator.  Form actions are

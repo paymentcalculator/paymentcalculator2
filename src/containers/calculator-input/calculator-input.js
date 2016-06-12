@@ -70,7 +70,7 @@ export default class CalculatorInput extends Component {
                             floatingLabelStyle={inputStyleLabel}
                             style={inputStyle}
                             value={this.props.calculator.inputDuration}
-                            floatingLabelText="Duration of Loan (months)"
+                            floatingLabelText="Duration of Loan (years)"
                         />
                     </MaterialField>
                 </Form>
