@@ -37,6 +37,7 @@ export default class CalculatorOutput extends Component {
                         </span>
                      </span>
                 </div>
+                <a href="https://amortizationcalculator.github.io">See Amortization Chart</a>
             </div>
         )
     }
